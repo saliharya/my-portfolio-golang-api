@@ -15,6 +15,10 @@ type ServiceItem struct {
 
 type ServicesRepository interface {
 	GetServices() (*Services, error)
+	CreateService(service ServiceItem) (*ServiceItem, error)
+	UpdateService(service ServiceItem) (*ServiceItem, error)
+	DeleteService(id int) error
+	UpdateSummary(summary string) (*Services, error)
 }
 
 type ServicesUsecase interface {

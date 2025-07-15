@@ -18,6 +18,7 @@ type Tool struct {
 
 type AboutRepository interface {
 	GetAbout() (*About, error)
+	UpdateAbout(about About) (*About, error)
 }
 
 type AboutUsecase interface {
